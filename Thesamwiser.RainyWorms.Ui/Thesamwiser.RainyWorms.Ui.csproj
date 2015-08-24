@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A019550-E4A5-44ED-8494-700C6F97404A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Thesamwiser.RainyWorms.Ui</RootNamespace>
+    <AssemblyName>Thesamwiser.RainyWorms.Ui</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameForm.Designer.cs">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\UserControlExtensions.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Collections\ObjectModel\Collection.cs" />
+    <Compile Include="UserControls\BaseRainyWormUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DiceUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DiceUserControl.Designer.cs">
+      <DependentUpon>DiceUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GamePlayDicesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GamePlayDicesUserControl.Designer.cs">
+      <DependentUpon>GamePlayDicesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\GamePlayUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\GamePlayUserControl.Designer.cs">
+      <DependentUpon>GamePlayUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PlayerScoreUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PlayerScoreUserControl.Designer.cs">
+      <DependentUpon>PlayerScoreUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WelcomeUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WelcomeUserControl.Designer.cs">
+      <DependentUpon>WelcomeUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\WormBlockUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\WormBlockUserControl.Designer.cs">
+      <DependentUpon>WormBlockUserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GameForm.resx">
+      <DependentUpon>GameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\DiceUserControl.resx">
+      <DependentUpon>DiceUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GamePlayDicesUserControl.resx">
+      <DependentUpon>GamePlayDicesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\GamePlayUserControl.resx">
+      <DependentUpon>GamePlayUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\PlayerScoreUserControl.resx">
+      <DependentUpon>PlayerScoreUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\WelcomeUserControl.resx">
+      <DependentUpon>WelcomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\WormBlockUserControl.resx">
+      <DependentUpon>WormBlockUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Business.GameFlow.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Business.GameManager.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Business.ThrowFlow.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.GameConfiguration.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.GamePlay.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.Player.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.PlayerConfig.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.RainyDice.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.RainyDiceValue.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.RainyWorm.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.WormGame.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Thesamwiser.Rainyworms.Business\Thesamwiser.Rainyworms.Business.csproj">
+      <Project>{45f81fca-8e9d-49a2-b232-d03bfe11e397}</Project>
+      <Name>Thesamwiser.Rainyworms.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Thesamwiser.Rainyworms.Domain\Thesamwiser.Rainyworms.Domain.csproj">
+      <Project>{223f0e2f-6c59-419f-ae26-36b19d468fcb}</Project>
+      <Name>Thesamwiser.Rainyworms.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\worm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
