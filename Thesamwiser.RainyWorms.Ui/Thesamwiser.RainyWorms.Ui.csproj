@@ -83,6 +83,12 @@
     <Compile Include="UserControls\PlayerScoreUserControl.Designer.cs">
       <DependentUpon>PlayerScoreUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ConfigurationUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ConfigurationUserControl.Designer.cs">
+      <DependentUpon>ConfigurationUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\WelcomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <EmbeddedResource Include="UserControls\PlayerScoreUserControl.resx">
       <DependentUpon>PlayerScoreUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ConfigurationUserControl.resx">
+      <DependentUpon>ConfigurationUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\WelcomeUserControl.resx">
       <DependentUpon>WelcomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +142,7 @@
     <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.GamePlay.datasource" />
     <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.Player.datasource" />
     <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.PlayerConfig.datasource" />
+    <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.PlayerSequenceDeterminator.datasource" />
     <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.RainyDice.datasource" />
     <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.RainyDiceValue.datasource" />
     <None Include="Properties\DataSources\Thesamwiser.Rainyworms.Domain.RainyWorm.datasource" />

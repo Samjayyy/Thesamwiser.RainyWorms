@@ -16,6 +16,7 @@ namespace Thesamwiser.Rainyworms.Domain
         public Player(string name, bool isHuman)
         {
             Name = name;
+            IsHuman = isHuman;
             _wormsWon = new Stack<RainyWorm>();
         }
 

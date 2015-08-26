@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Thesamwiser.Rainyworms.Business.ComputerLogic;
 using Thesamwiser.Rainyworms.Domain;
 
 namespace Thesamwiser.Rainyworms.Business
@@ -140,6 +141,10 @@ namespace Thesamwiser.Rainyworms.Business
             NextPlayer();
             _currentTurn.Reset();
             CurrentTurnChanged();
+            if (!CurrentPlayer.IsHuman)
+            {
+                new DumbComputer().Play(this);
+            }
         }
 
         /// <summary>

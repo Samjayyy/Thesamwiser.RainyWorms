@@ -40,7 +40,7 @@ namespace Thesamwiser.Rainyworms.Domain
         /// <summary>
         /// Default configured players
         /// </summary>
-        public IEnumerable<PlayerConfig> Players { get { return _players; } }
+        public IList<PlayerConfig> Players { get { return _players; } }
 
         /// <summary>
         /// Indication that the thrown dice should automatically be sorted at all time
@@ -121,15 +121,15 @@ namespace Thesamwiser.Rainyworms.Domain
         }
 
         // The possible ways
-        public static PlayerSequenceDeterminator AsConfigured = new PlayerSequenceDeterminator("As configured", 0, players => players);
+        public static PlayerSequenceDeterminator AsConfigured = new PlayerSequenceDeterminator("Zoals configuratie", 0, players => players);
         public static PlayerSequenceDeterminator RandomStarter = new PlayerSequenceDeterminator(
-            "Random person starts", 1, (players) =>
+            "Willekeurig persoon start", 1, (players) =>
             {
                 int starter = GameConfiguration.rnd.Next(players.ToList().Count);
                 return players.Skip(starter).Union(players.Take(starter));
             });
         public static PlayerSequenceDeterminator RandomSequence = new PlayerSequenceDeterminator(
-            "Random sequence", 1, (players) => players.OrderBy(p => GameConfiguration.rnd.Next()));
+            "Willekeurige volgorde", 2, (players) => players.OrderBy(p => GameConfiguration.rnd.Next()));
 
         public override string ToString() => Name;
     }

@@ -34,6 +34,7 @@
             this.tsmGameStart = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmGameAfsluiten = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlActiveUserControl = new System.Windows.Forms.Panel();
+            this.tsmInstellingen = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuGame.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +53,7 @@
             // tsmGame
             // 
             this.tsmGame.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmInstellingen,
             this.tsmGameStart,
             this.tsmGameAfsluiten});
             this.tsmGame.Name = "tsmGame";
@@ -63,14 +65,14 @@
             // tsmGameStart
             // 
             this.tsmGameStart.Name = "tsmGameStart";
-            this.tsmGameStart.Size = new System.Drawing.Size(121, 22);
+            this.tsmGameStart.Size = new System.Drawing.Size(152, 22);
             this.tsmGameStart.Text = "Start";
             this.tsmGameStart.Click += new System.EventHandler(this.tsmGameStart_Click);
             // 
             // tsmGameAfsluiten
             // 
             this.tsmGameAfsluiten.Name = "tsmGameAfsluiten";
-            this.tsmGameAfsluiten.Size = new System.Drawing.Size(121, 22);
+            this.tsmGameAfsluiten.Size = new System.Drawing.Size(152, 22);
             this.tsmGameAfsluiten.Text = "Afsluiten";
             this.tsmGameAfsluiten.Click += new System.EventHandler(this.tsmGameAfsluiten_Click);
             // 
@@ -82,6 +84,13 @@
             this.pnlActiveUserControl.Name = "pnlActiveUserControl";
             this.pnlActiveUserControl.Size = new System.Drawing.Size(984, 537);
             this.pnlActiveUserControl.TabIndex = 1;
+            // 
+            // tsmInstellingen
+            // 
+            this.tsmInstellingen.Name = "tsmInstellingen";
+            this.tsmInstellingen.Size = new System.Drawing.Size(152, 22);
+            this.tsmInstellingen.Text = "Instellingen";
+            this.tsmInstellingen.Click += new System.EventHandler(this.tsmInstellingen_Click);
             // 
             // GameForm
             // 
@@ -110,6 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmGameStart;
         private System.Windows.Forms.ToolStripMenuItem tsmGameAfsluiten;
         private System.Windows.Forms.Panel pnlActiveUserControl;
+        private System.Windows.Forms.ToolStripMenuItem tsmInstellingen;
     }
 }
 

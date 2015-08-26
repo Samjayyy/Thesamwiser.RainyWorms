@@ -93,6 +93,16 @@ namespace Thesamwiser.RainyWorms.Ui
         }
 
         /// <summary>
+        /// Configure how the game should be player
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmInstellingen_Click(object sender, System.EventArgs e)
+        {
+            ActiveUserControl = new ConfigurationUserControl();
+        }
+
+        /// <summary>
         /// Starting a new game
         /// </summary>
         /// <param name="sender"></param>

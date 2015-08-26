@@ -4,14 +4,18 @@ namespace Thesamwiser.Rainyworms.Business
 {
     public class GameManager
     {
-        private GameConfiguration _config;
         /// <summary>
         /// Default ctor
         /// </summary>
         public GameManager()
         {
-            _config = new GameConfiguration();
+            Config = new GameConfiguration();
         }
+
+        /// <summary>
+        /// The configuration that belongs to the manager
+        /// </summary>
+        public GameConfiguration Config { get; }
 
         /// <summary>
         /// Creates a new GameFlow
@@ -19,11 +23,11 @@ namespace Thesamwiser.Rainyworms.Business
         /// <returns></returns>
         public GameFlow CreateGameFlow()
         {
-            var players = _config.CreatePlayersInSequence();
+            var players = Config.CreatePlayersInSequence();
             return new GameFlow(players)
             {
-                ShouldSortThrownDice = _config.ShouldSortThrownDice,
-                ShouldSortTakenDice = _config.ShouldSortTakenDice
+                ShouldSortThrownDice = Config.ShouldSortThrownDice,
+                ShouldSortTakenDice = Config.ShouldSortTakenDice
             };
         }
     }

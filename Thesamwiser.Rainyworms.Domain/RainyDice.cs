@@ -73,6 +73,7 @@ namespace Thesamwiser.Rainyworms.Domain
         public string Name { get; }
         /// <summary>
         /// Unique sequence number
+        /// Condition: The sequence number is also bigger, for bigger values
         /// </summary>
         public int SequenceNumber { get; }
         /// <summary>
