@@ -10,6 +10,10 @@ namespace Thesamwiser.RainyWorms.Ui.UserControls
         public WormBlockUserControl()
         {
             InitializeComponent();
+            foreach (Control c in Controls)
+            {
+                c.Click += new EventHandler(WormBlockUserControl_Click);
+            }
         }
 
         /// <summary>
