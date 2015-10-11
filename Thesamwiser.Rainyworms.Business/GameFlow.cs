@@ -116,7 +116,9 @@ namespace Thesamwiser.Rainyworms.Business
                 && _currentTurn.State != ThrowFlowState.Taking
                 && _currentTurn.HasTakenWorm()
                 && (_wormsToTake.Contains(worm)
-                    || _players.Any(p => p != CurrentPlayer && p.TopWorm == worm)
+                    || (_currentTurn.TotalTakenValue == worm.ThrowValue 
+                        && _players.Any(p => p != CurrentPlayer && p.TopWorm == worm)
+                        )
                 );
         }
 
