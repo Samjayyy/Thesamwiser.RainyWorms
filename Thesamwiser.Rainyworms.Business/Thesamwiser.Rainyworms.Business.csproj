@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComputerLogic\DumbComputer.cs" />
+    <Compile Include="ComputerLogic\GameFlowLogic.cs" />
+    <Compile Include="ComputerLogic\HeuristicBasedComputer.cs" />
+    <Compile Include="ComputerLogic\LookAheadComputer.cs" />
+    <Compile Include="ComputerLogic\SafetyFirstComputer.cs" />
     <Compile Include="ThrowFlow.cs" />
     <Compile Include="GameFlow.cs" />
     <Compile Include="GameManager.cs" />

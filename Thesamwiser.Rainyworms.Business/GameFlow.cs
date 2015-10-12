@@ -12,6 +12,7 @@ namespace Thesamwiser.Rainyworms.Business
         private LinkedListNode<Player> _currentPlayerNode;
         private ThrowFlow _currentTurn;
         private List<RainyWorm> _wormsToTake;
+        private GameFlowLogic _computerLogic;
 
         /// <summary>
         /// Default ctor
@@ -19,6 +20,7 @@ namespace Thesamwiser.Rainyworms.Business
         public GameFlow(IEnumerable<Player> players)
         {
             _players = new LinkedList<Player>(players);
+            _computerLogic = new LookAheadComputer(); // TODO configurable / per computer player
             _currentPlayerNode = _players.Last;
             _wormsToTake = new List<RainyWorm>(RainyWorm.All);
             _currentTurn = new ThrowFlow(this);
@@ -145,7 +147,7 @@ namespace Thesamwiser.Rainyworms.Business
             CurrentTurnChanged();
             if (!CurrentPlayer.IsHuman)
             {
-                new DumbComputer().Play(this);
+                _computerLogic.Play(this);
             }
         }
 
